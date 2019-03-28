@@ -23,8 +23,6 @@ for x in range(1, numArgs):
     images.append(image)
 
 
-# mode1 = image.mode
-
 # params for ShiTomasi corner detection
 feature_params = dict( maxCorners = 100,
                        qualityLevel = 0.3,
@@ -45,8 +43,14 @@ old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 p0 = cv2.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
 
 # Create a mask image for drawing purposes
-mask = np.zeros_like(old_frame)
+lines = np.zeros_like(old_frame)
+circles = np.zeros_like(old_frame)
 
+
+
+radius = 2
+#masks = [];
+frame = None
 for im in images:
     # get the nex frame
     frame = im
@@ -64,11 +68,12 @@ for im in images:
     for i,(new,old) in enumerate(zip(good_new,good_old)):
         a,b = new.ravel()
         c,d = old.ravel()
-        mask = cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
-        frame = cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
-    img = cv2.add(frame,mask)
+        lines = cv2.line(lines, (a,b),(c,d), color[i].tolist(), 2)
+        circles = cv2.circle(circles,(a,b),radius,color[i].tolist(),-1)
+    #img = cv2.add(frame,mask)
 
-    cv2.imshow('frame',img)
+    radius += 1
+    #cv2.imshow('frame',img)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break
@@ -77,4 +82,11 @@ for im in images:
     old_gray = frame_gray.copy()
     p0 = good_new.reshape(-1,1,2)
 
+
+# for mask in masks:
+#    cv2.add(frame,mask)
+img = cv2.add(frame,lines)
+img =cv2.add(img,circles)
+cv2.imwrite('flow.jpg',img)
+#cv2.imshow('frame',frame)
 # cv2.destroyAllWindows()
