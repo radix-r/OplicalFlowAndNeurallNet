@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41599589-7649-4b0d-8780-59097deb495e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LucasKanadePyramid.py___jb_old___" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN/CNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,48 +15,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LucasKanade.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LucasKanadePyramid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1138">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1756638804/cv2/cv2/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138465">
-              <caret line="9246" column="10" selection-start-line="9246" selection-start-column="4" selection-end-line="9246" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -63,11 +23,55 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../PA1/src/pa1.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NN/CNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="9" selection-start-line="11" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="498">
+              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+              <folding>
+                <element signature="e#1488#1658#0" />
+                <element signature="e#1448#2971#0" />
+                <element signature="e#1954#2488#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NN/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="310" selection-start-line="310" selection-end-line="310" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/matplotlib/animation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1830">
+              <caret line="141" column="8" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.5/argparse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25920">
+              <caret line="1733" column="8" selection-start-line="1733" selection-start-column="8" selection-end-line="1733" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -78,6 +82,13 @@
     <findStrings>
       <find>#InterpolationFlags</find>
       <find>resize</find>
+      <find>sig</find>
+      <find>batch</find>
+      <find>NotImplementedError</find>
+      <find>dim</find>
+      <find>args.learning_rate</find>
+      <find>no_cuda</find>
+      <find>args</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,14 +100,18 @@
         <option value="$PROJECT_DIR$/LucasKanade.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/LucasKanadePyramid.py" />
+        <option value="$PROJECT_DIR$/CNN/CNN.py" />
+        <option value="$PROJECT_DIR$/CNN/main.py" />
+        <option value="$PROJECT_DIR$/NN/main.py" />
+        <option value="$PROJECT_DIR$/NN/CNN.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="872" />
+    <option name="x" value="971" />
     <option name="y" value="24" />
-    <option name="width" value="808" />
-    <option name="height" value="906" />
+    <option name="width" value="949" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,15 +127,20 @@
               <item name="PA2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PA2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PA2" type="462c0819:PsiDirectoryNode" />
+              <item name="NN" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LucasKanadePyramid.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/NN/main.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -139,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.model 2">
     <configuration name="LucasKanadePyramid" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PA2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,6 +182,53 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="model 1" type="PythonConfigurationType" factoryName="Python">
+      <module name="PA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/roboV/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NN" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NN/main.py" />
+      <option name="PARAMETERS" value="--mode 1 --epochs 60" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model 2" type="PythonConfigurationType" factoryName="Python">
+      <module name="PA2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/roboV/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NN" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NN/main.py" />
+      <option name="PARAMETERS" value="--mode 2 --epochs 60" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.LucasKanadePyramid" />
+      <item itemvalue="Python.model 1" />
+      <item itemvalue="Python.model 2" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -176,21 +244,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="872" y="24" width="808" height="906" extended-state="4" />
-    <editor active="true" />
+    <frame x="971" y="24" width="949" height="1056" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43949044" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22786178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31835687" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29989213" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3164693" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2992465" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3401797" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32831" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -202,9 +269,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LucasKanadePyramid.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/NN/main.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/NN/CNN.py</url>
+          <line>235</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -217,47 +289,54 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1756638804/builtins.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1756638804/builtins.py" />
+    <entry file="file://$PROJECT_DIR$/CNN.py" />
+    <entry file="file://$PROJECT_DIR$/main.py" />
+    <entry file="file://$PROJECT_DIR$/LucasKanade.py" />
+    <entry file="file://$PROJECT_DIR$/LucasKanadePyramid.py___jb_old___" />
+    <entry file="file://$PROJECT_DIR$/LucasKanadePyramid.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1756638804/cv2/cv2/__init__.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/nn/modules/activation.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/nn/modules/container.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/nn/modules/linear.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/nn/modules/conv.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/__init__.pyi" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/torch/nn/functional.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/site-packages/matplotlib/animation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="2851" column="8" selection-start-line="2851" selection-start-column="8" selection-end-line="2851" selection-end-column="8" />
+        <state relative-caret-position="1830">
+          <caret line="141" column="8" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CNN.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file:///usr/lib/python3.5/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25920">
+          <caret line="1733" column="8" selection-start-line="1733" selection-start-column="8" selection-end-line="1733" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/roboV/lib/python3.5/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="238">
           <caret line="310" selection-start-line="310" selection-end-line="310" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/NN/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="199">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LucasKanade.py">
+    <entry file="file://$PROJECT_DIR$/../PA1/src/pa1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1756638804/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138465">
-          <caret line="9246" column="10" selection-start-line="9246" selection-start-column="4" selection-end-line="9246" selection-end-column="10" />
+        <state relative-caret-position="-480">
+          <caret line="13" column="9" selection-start-line="11" selection-end-line="13" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -268,22 +347,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PA1/src/pa1.py">
+    <entry file="file://$PROJECT_DIR$/NN/CNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" selection-start-line="11" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LucasKanadePyramid.py___jb_old___">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1117" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LucasKanadePyramid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1138">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="498">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+          <folding>
+            <element signature="e#1488#1658#0" />
+            <element signature="e#1448#2971#0" />
+            <element signature="e#1954#2488#0" />
+          </folding>
         </state>
       </provider>
     </entry>
