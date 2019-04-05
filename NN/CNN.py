@@ -97,6 +97,7 @@ class Model_2(nn.Module):
             num_features *= s
         return num_features
 
+
 class Model_3(nn.Module):
     def __init__(self, hidden_size):
         super().__init__()
@@ -105,13 +106,16 @@ class Model_3(nn.Module):
         #
         # ----------------- YOUR CODE HERE ----------------------
 
+
+        self.filter = torch.ones(1,5,5)
         self.hidden_size = hidden_size
         self.conv1 = nn.Conv2d(1, 40, 5, 1)
         self.conv2 = nn.Conv2d(40, 40, 5, 1)
-        self.layer1 = nn.Linear(4, hidden_size)
-
+        self.layer1 = nn.Linear(40*4*4, hidden_size)
+        self.rel = nn.ReLU()
+        self.pool = torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
         # self.conv2 =
-        self.output_layer = nn.Linear(40 * 40 * 10, 10)
+        self.output_layer = nn.Linear(hidden_size, 10)
 
         # Uncomment the following stmt with appropriate input dimensions once model's implementation is done.
         # self.output_layer = nn.Linear(in_dim, 10)
@@ -125,25 +129,31 @@ class Model_3(nn.Module):
 
         # first convolution
         x = self.conv1(x)
-        rel = F.relu(x)
+        # sig = F.sigmoid(x)
+        x = F.relu(x)
         # Max pooling over a (2, 2) window
-        x = F.max_pool2d(rel, (2, 2))
+        x = self.pool(x)
 
         # second convolution
         x = self.conv2(x)
-        rel = F.relu(x)
+        #sig = F.sigmoid(x)
+        x = F.relu(x)
         # Max pooling over a (2, 2) window
-        x = F.max_pool2d(rel, (2, 2))
+        #x = F.max_pool2d(rel, (2, 2))
+        x= self.pool(x)
 
         # fully connected layer
-        x.view(x.size(0), -1)
-        # x = torch.reshape(x, (-1, self.input_dim, 1, 1))
+        # x.view(-1, 40*4*4)
+        x = torch.reshape(x, (-1, 40*4*4))
         x = self.layer1(x)
+        x = F.relu(x)
 
         # finalize output
-        x = x.view(-1, self.num_flat_features(x))
+        # x = x.view(-1, self.num_flat_features(x))
 
-        x = torch.relu_(self.output_layer(x))
+        x = F.sigmoid(self.output_layer(x))
+
+
 
         return x
 
@@ -238,9 +248,13 @@ class Net(nn.Module):
         # ======================================================================
         # Define softmax layer, use the features.
         # ----------------- YOUR CODE HERE ----------------------
-        soft = nn.Softmax()
+
+        softL = nn.LogSoftmax()
+        # softF = ()
+
+        logits = F.softmax(x)
 
         # Remove NotImplementedError and assign calculated value to logits after code implementation.
-        logits = soft(x)
+        #logits = softL(x)
         return logits
 

@@ -223,7 +223,7 @@ def main():
         args.num_epochs = 40
         args.hiddenSize = 1000
 
-        model = CNN.Net(4, args).to(device)
+        model = CNN.Net(5, args).to(device)
 
         accuracy = train_and_test(args, device, model, test_loader, train_loader)
 
