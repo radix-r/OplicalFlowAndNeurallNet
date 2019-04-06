@@ -14,7 +14,6 @@ class Model_1(nn.Module):
         # ----------------- YOUR CODE HERE ----------------------
         self.input_dim = input_dim
         self.hidden_size = hidden_size
-        # self.conv1 = nn.Conv2d(input_dim, hidden_size,1)
         self.layer1 = nn.Linear(input_dim, hidden_size)
         self.output_layer = nn.Linear(hidden_size, 10)
 
@@ -24,12 +23,8 @@ class Model_1(nn.Module):
         #
         # ----------------- YOUR CODE HERE ----------------------
 
-        # x = torch.reshape(x,(-1, self.input_dim, 1, 1))
         x = self.layer1(x)
-        # sig = F.sigmoid(c)
-        # Max pooling over a (2, 2) window
-        #x = F.max_pool2d(sig, (2, 2))
-        #x = x.view(-1, self.num_flat_features(x))
+
         x = torch.sigmoid(self.output_layer(x))
 
         return x
@@ -117,8 +112,7 @@ class Model_3(nn.Module):
         # self.conv2 =
         self.output_layer = nn.Linear(hidden_size, 10)
 
-        # Uncomment the following stmt with appropriate input dimensions once model's implementation is done.
-        # self.output_layer = nn.Linear(in_dim, 10)
+
 
     def forward(self, x):
         # ======================================================================
@@ -129,40 +123,25 @@ class Model_3(nn.Module):
 
         # first convolution
         x = self.conv1(x)
-        # sig = F.sigmoid(x)
         x = F.relu(x)
         # Max pooling over a (2, 2) window
         x = self.pool(x)
 
         # second convolution
         x = self.conv2(x)
-        #sig = F.sigmoid(x)
         x = F.relu(x)
         # Max pooling over a (2, 2) window
-        #x = F.max_pool2d(rel, (2, 2))
-        x= self.pool(x)
+        x = self.pool(x)
 
         # fully connected layer
-        # x.view(-1, 40*4*4)
         x = torch.reshape(x, (-1, 40*4*4))
         x = self.layer1(x)
         x = F.relu(x)
 
         # finalize output
-        # x = x.view(-1, self.num_flat_features(x))
-
-        x = F.sigmoid(self.output_layer(x))
-
-
+        x = torch.sigmoid(self.output_layer(x))
 
         return x
-
-    def num_flat_features(self, x):
-        size = x.size()[1:]  # all dimensions except the batch dimension
-        num_features = 1
-        for s in size:
-            num_features *= s
-        return num_features
 
 class Model_4(nn.Module):
     def __init__(self, hidden_size):
@@ -171,20 +150,46 @@ class Model_4(nn.Module):
         # Two convolutional layers + two fully connected layers, with ReLU.
         #
         # ----------------- YOUR CODE HERE ----------------------
-        # Uncomment the following stmt with appropriate input dimensions once model's implementation is done.
-        # self.output_layer = nn.Linear(in_dim, 10)
+
+        self.hidden_size = hidden_size
+        self.conv1 = nn.Conv2d(1, 40, 5, 1)
+        self.conv2 = nn.Conv2d(40, 40, 5, 1)
+        self.layer1 = nn.Linear(40 * 4 * 4, hidden_size)
+        self.layer2 = nn.Linear(hidden_size,hidden_size)
+        self.pool = torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        self.output_layer = nn.Linear(hidden_size, 10)
 
     def forward(self, x):
         # ======================================================================
         # Forward input x through your model to get features    #
         #
         # ----------------- YOUR CODE HERE ----------------------
-        #
 
-        # Uncomment the following return stmt once method implementation is done.
-        # return  features
-        # Delete line return NotImplementedError() once method is implemented.
-        return NotImplementedError()
+        # first convolution
+        x = self.conv1(x)
+        x = F.relu(x)
+        # Max pooling over a (2, 2) window
+        x = self.pool(x)
+
+        # second convolution
+        x = self.conv2(x)
+        x = F.relu(x)
+        # Max pooling over a (2, 2) window
+        x = self.pool(x)
+
+        # fully connected layer
+        x = torch.reshape(x, (-1, 40 * 4 * 4))
+        x = self.layer1(x)
+        x = F.relu(x)
+
+        # Second connected layer
+        x = self.layer2(x)
+        x = F.relu(x)
+
+        # finalize output
+        x = torch.sigmoid(self.output_layer(x))
+
+        return x
 
 class Model_5(nn.Module):
     def __init__(self, hidden_size):
@@ -194,7 +199,15 @@ class Model_5(nn.Module):
         # and  + Dropout.
         #
         # ----------------- YOUR CODE HERE ----------------------
-        #
+        self.hidden_size = hidden_size
+        self.conv1 = nn.Conv2d(1, 40, 5, 1)
+        self.conv2 = nn.Conv2d(40, 40, 5, 1)
+        self.layer1 = nn.Linear(40 * 4 * 4, hidden_size)
+        self.layer2 = nn.Linear(hidden_size,hidden_size)
+        self.pool = torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        self.output_layer = nn.Linear(hidden_size, 10)
+        self.dropOut1 = nn.Dropout(p=0.5)
+        self.dropOut2 = nn.Dropout(p=0.1)
         # Uncomment the following stmt with appropriate input dimensions once model's implementation is done.
         # self.output_layer = nn.Linear(in_dim, 10)
 
@@ -203,12 +216,36 @@ class Model_5(nn.Module):
         # Forward input x through your model to get features   #
         #
         # ----------------- YOUR CODE HERE ----------------------
-        #
 
-        # Uncomment the following return stmt once method implementation is done.
-        # return  features
-        # Delete line return NotImplementedError() once method is implemented.
-        return NotImplementedError()
+        # first convolution
+        x = self.conv1(x)
+        x = F.relu(x)
+        x = self.dropOut2(x)
+        # Max pooling over a (2, 2) window
+        x = self.pool(x)
+
+        # second convolution
+        x = self.conv2(x)
+        x = F.relu(x)
+        x=self.dropOut2(x)
+        # Max pooling over a (2, 2) window
+        x = self.pool(x)
+
+        # fully connected layer
+        x = torch.reshape(x, (-1, 40 * 4 * 4))
+        x = self.layer1(x)
+        x = F.relu(x)
+        x = self.dropOut1(x)
+
+        # Second connected layer
+        x = self.layer2(x)
+        x = F.relu(x)
+
+        # finalize output
+        x = torch.sigmoid(self.output_layer(x))
+
+        return x
+
 
 
 class Net(nn.Module):

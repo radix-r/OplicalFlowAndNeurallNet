@@ -1,4 +1,6 @@
 ## Optical Flow
+Input images:
+
 ![img1](OpticalFlow/basketball1.png)
 ![img1](OpticalFlow/basketball2.png)
 
@@ -32,6 +34,10 @@ At 99% by epoch 30
 
 ### Step 3
 
-Strange output because accuracy starts very low and the loss is often 0.00 . There is likely an error in my network design. 
+![Step3](NN/CNN3-2.png)
 
-![Step 3-1](NN/CNN3-1.png)
+### Step 4
+![step4](NN/CNN4.png)
+
+### Step 5
+![step5](NN/CNN5.png)
